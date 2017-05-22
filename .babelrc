@@ -1,0 +1,15 @@
+{
+    "presets": [
+        [
+            "env",
+            {
+                "targets": {
+                    "browsers": ["> 0%"]
+                },
+                "useBuiltIns": true
+            }
+        ],
+        "react"
+    ],
+    "plugins": ["transform-object-rest-spread"]
+}

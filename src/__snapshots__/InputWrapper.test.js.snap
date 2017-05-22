@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`handles no props 1`] = `<input />`;
+
+exports[`handles random props 1`] = `
+<input
+  className="btn"
+  defaultValue="hello"
+  id="button"
+/>
+`;

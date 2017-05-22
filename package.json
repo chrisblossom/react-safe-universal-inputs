@@ -1,0 +1,65 @@
+{
+  "name": "react-safe-universal-inputs",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "license": "MIT",
+  "now": {
+    "alias": "react-safe-universal-inputs",
+    "engines": {
+      "node": "^6.0.0"
+    },
+    "files": [
+      "./dist/**/*.js",
+      "./example/build/**/*.js",
+      "./example/build/**/*.css"
+    ]
+  },
+  "scripts": {
+    "build": "babel-node ./tools/build",
+    "build:example": "babel-node ./example/tools/build.js",
+    "build:now": "npm run build && npm run build:example",
+    "now-build": "echo $NODE_ENV",
+    "example": "npm run build && babel-node ./example/tools/start.js",
+    "start": "node ./example/build/server.js",
+    "prettier": "find . -name \"*.js\" | grep -v -f .gitignore | xargs prettier --print-width 100 --tab-width 4 --single-quote --trailing-comma all --write",
+    "precommit": "lint-staged",
+    "prepublishOnly": "npm run prettier && jest && npm run build"
+  },
+  "lint-staged": {
+    "**/*.js": [
+      "prettier --print-width 100 --tab-width 4 --single-quote --trailing-comma all --write",
+      "git add",
+      "jest"
+    ]
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.4.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.15.3",
+    "fs-extra": "^3.0.1",
+    "husky": "^0.13.3",
+    "jest": "^20.0.3",
+    "lint-staged": "^3.4.2",
+    "nodemon": "^1.11.0",
+    "prettier": "^1.3.1",
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "react-test-renderer": "^15.5.4",
+    "rollup": "^0.41.6",
+    "rollup-plugin-babel": "^2.7.1",
+    "source-map-support": "^0.4.15",
+    "webpack": "^2.5.1",
+    "webpack-node-externals": "^1.6.0"
+  },
+  "peerDependencies": {
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
+  }
+}
