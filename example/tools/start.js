@@ -4,9 +4,7 @@ import path from 'path';
 import webpack from 'webpack';
 import nodemon from 'nodemon';
 import clientWebpackConfig from './webpack.client.babel';
-
 import serverWebpackConfig from './webpack.server.babel';
-
 import fse from 'fs-extra';
 
 const exampleDir = path.resolve(process.cwd(), 'example/');

@@ -4,12 +4,11 @@
             "env",
             {
                 "targets": {
-                    "browsers": ["> 0%"]
+                    "node": "current"
                 },
                 "useBuiltIns": true
             }
-        ],
-        "react"
+        ]
     ],
     "plugins": ["transform-object-rest-spread"]
 }

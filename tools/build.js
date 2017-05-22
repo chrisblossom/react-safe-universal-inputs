@@ -37,6 +37,7 @@ const build = Promise.all(
                             {
                                 targets: {
                                     browsers: ['> 0%'],
+                                    uglify: true,
                                 },
                                 exclude: ['transform-regenerator'],
                                 useBuiltIns: true,

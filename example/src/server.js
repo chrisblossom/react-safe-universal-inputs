@@ -40,7 +40,7 @@ app.use('*', (request, response) => {
         <br/>
         <br/>
         <h2>
-            Demo of <a href="https://github.com/chrisblossom/react-safe-universal-inputs" target="_blank">react-safe-universal-inputs</a>
+            Demo of <a href="https://github.com/chrisblossom/react-safe-universal-inputs">react-safe-universal-inputs</a>
         </h2>
         <br/>
         <br/>
@@ -57,7 +57,7 @@ app.use('*', (request, response) => {
     response.send(html);
 });
 
-const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 server.listen(port, error => {
     if (error) {

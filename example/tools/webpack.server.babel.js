@@ -52,7 +52,7 @@ const server = {
                                     'env',
                                     {
                                         targets: {
-                                            browsers: ['> 0%'],
+                                            node: '6.10',
                                         },
                                         exclude: ['transform-regenerator'],
                                         useBuiltIns: true,
