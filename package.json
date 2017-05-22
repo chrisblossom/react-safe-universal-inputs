@@ -1,6 +1,7 @@
 {
   "name": "react-safe-universal-inputs",
-  "version": "1.0.0",
+  "repository": "chrisblossom/react-safe-universal-inputs",
+  "version": "1.0.1",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "license": "MIT",

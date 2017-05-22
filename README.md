@@ -8,9 +8,9 @@ Demo: [https://react-safe-universal-inputs.herokuapp.com](https://react-safe-uni
 
 Usage:
 
-``yarn add react-safe-universal-inputs``
+``yarn add react-safe-universal-inputs`` or ``npm install --save react-safe-universal-inputs``
 
-```js
+```jsx
 import React, { Component } from 'react';
 import { Input, Select } from 'react-safe-universal-inputs';
 
