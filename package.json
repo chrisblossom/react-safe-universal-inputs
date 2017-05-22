@@ -1,19 +1,19 @@
 {
   "name": "react-safe-universal-inputs",
   "repository": "chrisblossom/react-safe-universal-inputs",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "license": "MIT",
   "scripts": {
     "build": "babel-node ./tools/build",
-    "heroku-postbuild": "npm run build && npm run build:example",
     "build:example": "babel-node ./example/tools/build.js",
+    "heroku-postbuild": "npm run build && npm run build:example",
     "example": "npm run build && babel-node ./example/tools/start.js",
     "start": "node ./example/build/server.js",
     "prettier": "find . -name \"*.js\" | grep -v -f .gitignore | xargs prettier --print-width 100 --tab-width 4 --single-quote --trailing-comma all --write",
     "precommit": "lint-staged",
-    "prepublish": "npm run prettier && jest && npm run build"
+    "prepublishOnly": "npm run prettier && jest && npm run build"
   },
   "lint-staged": {
     "**/*.js": [
