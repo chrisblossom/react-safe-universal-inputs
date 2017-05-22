@@ -57,7 +57,9 @@ app.use('*', (request, response) => {
     response.send(html);
 });
 
-server.listen(3000, error => {
+const port = process.env.PORT ? parseInt(process.env.PORT, 10) : 4000;
+
+server.listen(port, error => {
     if (error) {
         console.error('express start error', error);
     }

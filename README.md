@@ -4,7 +4,7 @@ This module fixes a race condition when using controlled inputs combined with se
 
 Related issues: [#2585](https://github.com/facebook/react/issues/2585) [#4293](https://github.com/facebook/react/issues/4293)
 
-Demo: [https://react-safe-universal-inputs.now.sh/](https://react-safe-universal-inputs.now.sh/)
+Demo: [https://react-safe-universal-inputs.herokuapp.com](https://react-safe-universal-inputs.herokuapp.com)
 
 Usage:
 
