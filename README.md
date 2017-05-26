@@ -10,51 +10,88 @@ Usage:
 
 ``yarn add react-safe-universal-inputs`` or ``npm install --save react-safe-universal-inputs``
 
+Pass a function to ``onEarlyInput`` that handles a changed node. Called once with ``componentDidMount`` and is only called if the value has changed before the initial react render.
+
 ```jsx
 import React, { Component } from 'react';
-import { Input, Select } from 'react-safe-universal-inputs';
+import { Input, Select, Textarea } from 'react-safe-universal-inputs';
 
 export default class Example extends Component {
     constructor() {
         super();
         
         this.state = {
-            input: 'initial value',
+            text: 'initial text',
+            checkbox: false,
             select: 'yes',
+            textarea: 'initial textarea',
         };
         
-        this.handleInputChange = this.handleInputChange.bind(this);
-        this.handleSelectChange = this.handleSelectChange.bind(this);
+        this.handleEarlyInput = this.handleEarlyInput.bind(this);
+        this.handleChange = this.handleChange.bind(this);
     }
     
-    handleInputChange(event) {
-        event.preventDefault();
+    handleEarlyInput(inputNode) {
+        const value = inputNode.type === 'checkbox' 
+            ? inputNode.checked 
+            : inputNode.value;
         
         this.setState(() => {
             return {
-                input: event.target.value,
+                [inputNode.name]: value,
             }
         });
     }
     
-    handleSelectChange(event) {
+    handleChange(event) {
         event.preventDefault();
         
+        const value = event.target.type === 'checkbox' 
+            ? event.target.checked 
+            : event.target.value;
+    
         this.setState(() => {
             return {
-                select: event.target.value,
-            }
+                [event.target.name]: value,
+            };
         });
     }
     
     render() {
         return (
             <form>
-                <Input onChange={this.handleInputChange} value={this.state.input}/>
-                <Select onChange={this.handleSelectChange} value={this.state.select}>
+                <Input 
+                    type="text"
+                    name="text" 
+                    onEarlyInput={this.handleEarlyInput} 
+                    onChange={this.handleChange} 
+                    value={this.state.text}
+                />
+                
+                <Input 
+                    type="checkbox"
+                    name="checkbox" 
+                    onEarlyInput={this.handleEarlyInput} 
+                    onChange={this.handleChange} 
+                    value={this.state.checkbox}
+                />
+                
+                <Select 
+                    name="select" 
+                    onEarlyInput={this.handleEarlyInput} 
+                    onChange={this.handleChange} 
+                    value={this.state.select}
+                >
                     <option value="yes">yes</option>
                     <option value="no">no</option>
                 </Select>
+                
+                <Textarea 
+                    name="textarea" 
+                    onEarlyInput={this.handleEarlyInput} 
+                    onChange={this.handleChange} 
+                    value={this.state.textarea}
+                />
             </form>
         );
     }
@@ -64,5 +101,3 @@ export default class Example extends Component {
 
 ## Known Issues:
 1. ref is not accessible.
-2. onChange is called with a fake event handler with the majority of the event fields missing.
-3. Inputs need unique onChange handlers. Related to issue #2 

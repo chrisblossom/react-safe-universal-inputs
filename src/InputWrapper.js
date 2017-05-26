@@ -6,50 +6,45 @@ class InputWrapper extends Component {
     }
 
     /**
+     * Event handlers are initiated right before componentDidMount
+     *
      * https://github.com/facebook/react/issues/4999#issuecomment-144557619
      */
     componentDidMount() {
-        const { onChange, value } = this.props;
+        const { onEarlyInput, value, checked } = this.props;
 
-        if (
-            this.initValue !== undefined &&
-            this.initValue !== value &&
-            typeof onChange === 'function'
-        ) {
-            /**
-             * TODO: Initiate a real onChange event.
-             *
-             * http://stackoverflow.com/questions/23892547/what-is-the-best-way-to-trigger-onchange-event-in-react-js
-             * https://github.com/vitalyq/react-trigger-change
-             */
-            onChange({
-                preventDefault() {
-                    return null;
-                },
+        if (this.inputNode !== undefined && typeof onEarlyInput === 'function') {
+            const valuesEqual = this.inputNode.type === 'checked'
+                ? this.inputNode.checked !== checked
+                : this.inputNode.value !== value;
 
-                target: {
-                    value: this.initValue,
-                },
-            });
+            if (valuesEqual) {
+                onEarlyInput(this.inputNode);
+            }
         }
     }
 
     render() {
-        const { children, __INTERNAL_TAG_TYPE__: HTMLInputTag, ...props } = this.props;
+        const {
+            children,
+            __INTERNAL_TAG_TYPE__: HTMLInputTag,
+            onEarlyInput,
+            ...props
+        } = this.props;
 
-        const onChange = this.props.onChange;
         const value = this.props.value;
+        const checked = this.props.checked;
 
         return (
             <HTMLInputTag
                 ref={input => {
                     if (
                         input &&
-                        typeof onChange === 'function' &&
-                        value !== undefined &&
-                        this.initValue === undefined
+                        typeof onEarlyInput === 'function' &&
+                        (value !== undefined || checked !== undefined) &&
+                        this.inputNode === undefined
                     ) {
-                        this.initValue = input.value || '';
+                        this.inputNode = input;
                     }
                 }}
                 {...props}
