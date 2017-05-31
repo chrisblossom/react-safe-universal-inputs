@@ -33,6 +33,10 @@ app.use('*', (request, response) => {
     <html>
       <head>
         <title>react-safe-universal-inputs demo</title>
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1"
+        />
         <link rel="stylesheet" href="/dist/bootstrap.min.css" />
       </head>
       
@@ -50,6 +54,7 @@ app.use('*', (request, response) => {
         <div id="root">${rendered}</div>
       </body>
       
+      <script>window.__AUTO__=false;</script>
       <script src="/dist/main.js"></script>
     </html>
   `;

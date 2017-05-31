@@ -339,7 +339,6 @@ it('should handle checkbox initial true', () => {
     const lastMarkup = ReactDOMServer.renderToString(<TestComponent />)
         // simulate user value change that react is unaware of
         .replace(/ checked=""/g, '');
-    console.log(lastMarkup);
 
     element.innerHTML = lastMarkup;
 

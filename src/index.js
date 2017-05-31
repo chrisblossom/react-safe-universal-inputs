@@ -9,8 +9,4 @@ const Select = props => {
     return <InputWrapper __INTERNAL_TAG_TYPE__="select" {...props} />;
 };
 
-const Textarea = props => {
-    return <InputWrapper __INTERNAL_TAG_TYPE__="textarea" {...props} />;
-};
-
-export { Input, Select, Textarea };
+export { Input, Select };

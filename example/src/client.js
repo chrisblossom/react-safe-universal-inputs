@@ -42,15 +42,34 @@ initAuto.onclick = event => {
         initAuto.innerHTML = 'updating values...';
         initAuto.className = 'btn btn-danger';
         initManual.disabled = true;
+        window.__AUTO__ = true;
 
         Object.keys(values).forEach(id => {
             const matchedId = document.getElementById(id);
+
+            if (!matchedId) {
+                console.warn(`${id} not found`);
+
+                return;
+            }
+
             const updatedValue = values[id].updated;
-            matchedId.value = updatedValue;
+
+            const type = matchedId.type;
+
+            if (type === 'checkbox') {
+                matchedId.checked = updatedValue;
+
+                return;
+            }
 
             if (updatedValue === 'checked') {
                 matchedId.checked = true;
+
+                return;
             }
+
+            matchedId.value = updatedValue;
         });
 
         setTimeout(() => {

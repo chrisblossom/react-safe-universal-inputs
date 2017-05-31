@@ -22,9 +22,7 @@ export default class Example extends Component {
         
         this.state = {
             text: 'initial text',
-            checkbox: false,
             select: 'yes',
-            textarea: 'initial textarea',
         };
         
         this.handleEarlyInput = this.handleEarlyInput.bind(this);
@@ -32,9 +30,7 @@ export default class Example extends Component {
     }
     
     handleEarlyInput(inputNode) {
-        const value = inputNode.type === 'checkbox' 
-            ? inputNode.checked 
-            : inputNode.value;
+        const value = inputNode.value;
         
         this.setState(() => {
             return {
@@ -46,13 +42,12 @@ export default class Example extends Component {
     handleChange(event) {
         event.preventDefault();
         
-        const value = event.target.type === 'checkbox' 
-            ? event.target.checked 
-            : event.target.value;
-    
+        const type = event.target.type;
+        const name = event.target.name;
+
         this.setState(() => {
             return {
-                [event.target.name]: value,
+                [name]: value,
             };
         });
     }
@@ -68,14 +63,6 @@ export default class Example extends Component {
                     value={this.state.text}
                 />
                 
-                <Input 
-                    type="checkbox"
-                    name="checkbox" 
-                    onEarlyInput={this.handleEarlyInput} 
-                    onChange={this.handleChange} 
-                    value={this.state.checkbox}
-                />
-                
                 <Select 
                     name="select" 
                     onEarlyInput={this.handleEarlyInput} 
@@ -85,19 +72,15 @@ export default class Example extends Component {
                     <option value="yes">yes</option>
                     <option value="no">no</option>
                 </Select>
-                
-                <Textarea 
-                    name="textarea" 
-                    onEarlyInput={this.handleEarlyInput} 
-                    onChange={this.handleChange} 
-                    value={this.state.textarea}
-                />
             </form>
         );
     }
 }
 ```
 
+See the ``/example/`` folder / demo for more examples.
+
 
 ## Known Issues:
 1. ref is not accessible.
+2. ``<textarea`` is not currently supported.
