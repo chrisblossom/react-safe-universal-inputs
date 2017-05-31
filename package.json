@@ -11,13 +11,13 @@
     "heroku-postbuild": "npm run build && npm run build:example",
     "example": "npm run build && babel-node ./example/tools/start.js",
     "start": "node ./example/build/server.js",
-    "prettier": "find . -name \"*.js\" | grep -v -f .gitignore | xargs prettier --print-width 100 --tab-width 4 --single-quote --trailing-comma all --write",
+    "prettier": "find . -name \"*.js\" | grep -v -f .gitignore | xargs prettier --tab-width 4 --single-quote --trailing-comma all --write",
     "precommit": "lint-staged",
     "prepublishOnly": "npm run prettier && jest && npm run build"
   },
   "lint-staged": {
     "**/*.js": [
-      "prettier --print-width 100 --tab-width 4 --single-quote --trailing-comma all --write",
+      "prettier --tab-width 4 --single-quote --trailing-comma all --write",
       "git add",
       "jest"
     ]

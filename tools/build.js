@@ -46,7 +46,10 @@ const build = Promise.all(
                         ],
                         'react',
                     ],
-                    plugins: ['external-helpers', 'transform-object-rest-spread'],
+                    plugins: [
+                        'external-helpers',
+                        'transform-object-rest-spread',
+                    ],
                 }),
             ],
         });

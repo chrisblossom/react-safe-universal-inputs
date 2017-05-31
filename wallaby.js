@@ -4,7 +4,13 @@
 
 module.exports = wallaby => {
     return {
-        files: ['src/**/*.js', 'src/**/*.snap', 'jest.config.js', '.env', '!src/**/*.test.js'],
+        files: [
+            'src/**/*.js',
+            'src/**/*.snap',
+            'jest.config.js',
+            '.env',
+            '!src/**/*.test.js',
+        ],
 
         tests: ['src/**/*.test.js'],
 

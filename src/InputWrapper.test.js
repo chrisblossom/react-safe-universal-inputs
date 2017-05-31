@@ -61,7 +61,10 @@ it('should show react input load bug', () => {
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.value).toEqual('new value');
 
     expect(instance.state.value).toEqual('');
@@ -133,7 +136,10 @@ it('should trigger onChange when input changed before react client render', () =
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.value).toEqual('new value');
     expect(instance.state.value).toEqual('new value');
     expect(changedTriggered).toEqual(true);
@@ -203,7 +209,10 @@ it('should return dom node to onEarlyInput function', () => {
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.value).toEqual('new value');
     expect(instance.state.example).toEqual('new value');
     expect(changedTriggered).toEqual(true);
@@ -273,7 +282,10 @@ it('should handle checkbox initial false', () => {
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.checked).toEqual(true);
     expect(instance.state.checked).toEqual(true);
     expect(changedTriggered).toEqual(true);
@@ -343,7 +355,10 @@ it('should handle checkbox initial true', () => {
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.checked).toEqual(false);
     expect(instance.state.checked).toEqual(false);
     expect(changedTriggered).toEqual(true);
@@ -412,7 +427,10 @@ it('should handle value to empty', () => {
     element.innerHTML = lastMarkup;
 
     const instance = ReactDOM.render(<TestComponent />, element);
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
     expect(el.value).toEqual('');
     expect(instance.state.value).toEqual('');
     expect(changedTriggered).toEqual(true);
@@ -446,7 +464,10 @@ it('handles uncontrolled', () => {
 
     const instance = ReactDOM.render(<TestComponent />, element);
 
-    const el = ReactTestUtils.findRenderedDOMComponentWithTag(instance, 'input');
+    const el = ReactTestUtils.findRenderedDOMComponentWithTag(
+        instance,
+        'input',
+    );
 
     expect(el.value).toEqual('new value');
     expect(changedTriggered).toEqual(false);

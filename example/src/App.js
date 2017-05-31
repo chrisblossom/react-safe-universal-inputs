@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { Input, Select, Textarea } from '../../src/index';
+import { Input, Select } from '../../src/index';
 
 const values = {
     rawInput: {
@@ -74,7 +74,9 @@ class App extends Component {
 
     handleEarlyInput(inputNode) {
         const name = inputNode.name;
-        const value = inputNode.type === 'checkbox' ? inputNode.checked : inputNode.value;
+        const value = inputNode.type === 'checkbox'
+            ? inputNode.checked
+            : inputNode.value;
 
         this.setState(() => {
             return {
@@ -86,7 +88,9 @@ class App extends Component {
     handleChange(event) {
         const type = event.target.type;
         const name = event.target.name;
-        const value = type === 'checkbox' ? event.target.checked : event.target.value;
+        const value = type === 'checkbox'
+            ? event.target.checked
+            : event.target.value;
 
         if (type !== 'checkbox' && type !== 'radio') {
             event.preventDefault();
@@ -250,7 +254,9 @@ class App extends Component {
                             id="rawRadio1"
                             type="radio"
                             name="rawRadio"
-                            checked={this.state.rawRadio === values.rawRadio.initial}
+                            checked={
+                                this.state.rawRadio === values.rawRadio.initial
+                            }
                             onChange={this.handleChange}
                             value={values.rawRadio.initial}
                         />
@@ -262,7 +268,9 @@ class App extends Component {
                             type="radio"
                             id="rawRadio"
                             name="rawRadio"
-                            checked={this.state.rawRadio === values.rawRadio.updated}
+                            checked={
+                                this.state.rawRadio === values.rawRadio.updated
+                            }
                             onChange={this.handleChange}
                             value={values.rawRadio.updated}
                         />
@@ -377,8 +385,12 @@ class App extends Component {
                             onChange={this.handleChange}
                             value={this.state.select}
                         >
-                            <option value={values.select.initial}>{values.select.initial}</option>
-                            <option value={values.select.updated}>{values.select.updated}</option>
+                            <option value={values.select.initial}>
+                                {values.select.initial}
+                            </option>
+                            <option value={values.select.updated}>
+                                {values.select.updated}
+                            </option>
                         </Select>
                         {'  '}state: {this.state.select}
                     </div>

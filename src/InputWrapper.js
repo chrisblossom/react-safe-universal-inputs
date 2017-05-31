@@ -13,10 +13,16 @@ class InputWrapper extends Component {
     componentDidMount() {
         const { onEarlyInput, value, checked } = this.props;
 
-        if (this.inputNode !== undefined && typeof onEarlyInput === 'function') {
+        if (
+            this.inputNode !== undefined &&
+            typeof onEarlyInput === 'function'
+        ) {
             const type = this.inputNode.type;
 
-            if ((type === 'checkbox' || type === 'radio') && this.inputNode.checked !== checked) {
+            if (
+                (type === 'checkbox' || type === 'radio') &&
+                this.inputNode.checked !== checked
+            ) {
                 onEarlyInput(this.inputNode);
 
                 return;
