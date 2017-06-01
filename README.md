@@ -10,7 +10,9 @@ Usage:
 
 ``yarn add react-safe-universal-inputs`` or ``npm install --save react-safe-universal-inputs``
 
-Pass a function to ``onEarlyInput`` that handles a changed node. Called once with ``componentDidMount`` and is only called if the value has changed before the initial react render.
+Optionally pass a function to ``onEarlyInput`` that handles a changed node, otherwise ``onChange`` is called. 
+
+Called once with ``componentDidMount`` and is only called if the value has changed before the initial react render.
 
 ```jsx
 import React, { Component } from 'react';
@@ -58,7 +60,6 @@ export default class Example extends Component {
                 <Input 
                     type="text"
                     name="text" 
-                    onEarlyInput={this.handleEarlyInput} 
                     onChange={this.handleChange} 
                     value={this.state.text}
                 />
