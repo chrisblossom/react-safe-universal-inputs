@@ -5,6 +5,8 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+### Added
+- Re-added Automatic "early input" handling when ``onEarlyInput`` does not exist.
 
 ## [2.0.0] - 2017-05-31
 ### Added
