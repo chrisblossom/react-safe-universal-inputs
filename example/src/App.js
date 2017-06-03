@@ -110,7 +110,12 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.rawInput === values.rawInput.updated ? 'alert-success' : 'alert-danger') : 'alert-info'}
+                            ${this.state.auto
+                                ? this.state.rawInput ===
+                                      values.rawInput.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-info'}
                         `}
                     >
                         <h4>
@@ -137,7 +142,11 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.input === values.input.updated ? 'alert-success' : 'alert-danger') : 'alert-warning'}
+                            ${this.state.auto
+                                ? this.state.input === values.input.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-warning'}
                         `}
                     >
                         <h4>
@@ -170,7 +179,12 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.rawCheckbox === values.rawCheckbox.updated ? 'alert-success' : 'alert-danger') : 'alert-info'}
+                            ${this.state.auto
+                                ? this.state.rawCheckbox ===
+                                      values.rawCheckbox.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-info'}
                         `}
                     >
                         <h4>
@@ -199,7 +213,12 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.checkbox === values.checkbox.updated ? 'alert-success' : 'alert-danger') : 'alert-warning'}
+                            ${this.state.auto
+                                ? this.state.checkbox ===
+                                      values.checkbox.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-warning'}
                         `}
                     >
                         <h4>
@@ -234,7 +253,12 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.rawRadio === values.rawRadio.updated ? 'alert-success' : 'alert-danger') : 'alert-info'}
+                            ${this.state.auto
+                                ? this.state.rawRadio ===
+                                      values.rawRadio.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-info'}
                         `}
                     >
                         <h4>
@@ -281,7 +305,11 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.radio === values.radio.updated ? 'alert-success' : 'alert-danger') : 'alert-warning'}
+                            ${this.state.auto
+                                ? this.state.radio === values.radio.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-warning'}
                         `}
                     >
                         <h4>
@@ -328,7 +356,12 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.rawSelect === values.rawSelect.updated ? 'alert-success' : 'alert-danger') : 'alert-info'}
+                            ${this.state.auto
+                                ? this.state.rawSelect ===
+                                      values.rawSelect.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-info'}
                         `}
                     >
                         <h4>
@@ -362,7 +395,11 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto ? (this.state.select === values.select.updated ? 'alert-success' : 'alert-danger') : 'alert-warning'}
+                            ${this.state.auto
+                                ? this.state.select === values.select.updated
+                                  ? 'alert-success'
+                                  : 'alert-danger'
+                                : 'alert-warning'}
                         `}
                     >
                         <h4>

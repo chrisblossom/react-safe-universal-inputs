@@ -16,7 +16,7 @@ Called once with ``componentDidMount`` and is only called if the value has chang
 
 ```jsx
 import React, { Component } from 'react';
-import { Input, Select, Textarea } from 'react-safe-universal-inputs';
+import { Input, Select } from 'react-safe-universal-inputs';
 
 export default class Example extends Component {
     constructor() {
