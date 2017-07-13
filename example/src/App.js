@@ -74,9 +74,8 @@ class App extends Component {
 
     handleEarlyInput(inputNode) {
         const name = inputNode.name;
-        const value = inputNode.type === 'checkbox'
-            ? inputNode.checked
-            : inputNode.value;
+        const value =
+            inputNode.type === 'checkbox' ? inputNode.checked : inputNode.value;
 
         this.setState(() => {
             return {
@@ -88,9 +87,8 @@ class App extends Component {
     handleChange(event) {
         const type = event.target.type;
         const name = event.target.name;
-        const value = type === 'checkbox'
-            ? event.target.checked
-            : event.target.value;
+        const value =
+            type === 'checkbox' ? event.target.checked : event.target.value;
 
         if (type !== 'checkbox' && type !== 'radio') {
             event.preventDefault();
@@ -112,7 +110,7 @@ class App extends Component {
                         className={`form-group col-sm-6 alert
                             ${this.state.auto
                                 ? this.state.rawInput ===
-                                      values.rawInput.updated
+                                  values.rawInput.updated
                                   ? 'alert-success'
                                   : 'alert-danger'
                                 : 'alert-info'}
@@ -121,13 +119,8 @@ class App extends Component {
                         <h4>
                             Raw Input
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.rawInput.initial}
-                                , updated:
-                                {' '}
-                                {values.rawInput.updated}
+                                {' '}- initial: {values.rawInput.initial}
+                                , updated: {values.rawInput.updated}
                             </span>
                         </h4>
                         <input
@@ -152,16 +145,10 @@ class App extends Component {
                         <h4>
                             Input
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.input.initial}
-                                , updated:
-                                {' '}
-                                {values.input.updated}
+                                {' '}- initial: {values.input.initial}
+                                , updated: {values.input.updated}
                             </span>
                         </h4>
-
                         <Input
                             type="text"
                             id="input"
@@ -176,12 +163,11 @@ class App extends Component {
                 <hr />
 
                 <div className="row">
-
                     <div
                         className={`form-group col-sm-6 alert
                             ${this.state.auto
                                 ? this.state.rawCheckbox ===
-                                      values.rawCheckbox.updated
+                                  values.rawCheckbox.updated
                                   ? 'alert-success'
                                   : 'alert-danger'
                                 : 'alert-info'}
@@ -190,16 +176,12 @@ class App extends Component {
                         <h4>
                             Raw Checkbox
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
+                                {' '}- initial:{' '}
                                 {values.rawCheckbox.initial.toString()}
-                                , updated:
-                                {' '}
+                                , updated:{' '}
                                 {values.rawCheckbox.updated.toString()}
                             </span>
                         </h4>
-
                         <input
                             type="checkbox"
                             id="rawCheckbox"
@@ -207,7 +189,6 @@ class App extends Component {
                             checked={this.state.rawCheckbox}
                             onChange={this.handleChange}
                         />
-
                         {'  '}state: {this.state.rawCheckbox.toString()}
                     </div>
 
@@ -215,7 +196,7 @@ class App extends Component {
                         className={`form-group col-sm-6 alert
                             ${this.state.auto
                                 ? this.state.checkbox ===
-                                      values.checkbox.updated
+                                  values.checkbox.updated
                                   ? 'alert-success'
                                   : 'alert-danger'
                                 : 'alert-warning'}
@@ -224,16 +205,11 @@ class App extends Component {
                         <h4>
                             Checkbox
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
+                                {' '}- initial:{' '}
                                 {values.checkbox.initial.toString()}
-                                , updated:
-                                {' '}
-                                {values.checkbox.updated.toString()}
+                                , updated: {values.checkbox.updated.toString()}
                             </span>
                         </h4>
-
                         <Input
                             type="checkbox"
                             id="checkbox"
@@ -242,7 +218,6 @@ class App extends Component {
                             onChange={this.handleChange}
                             onEarlyInput={this.handleEarlyInput}
                         />
-
                         {'  '}
                         state: {this.state.checkbox.toString()}
                     </div>
@@ -255,7 +230,7 @@ class App extends Component {
                         className={`form-group col-sm-6 alert
                             ${this.state.auto
                                 ? this.state.rawRadio ===
-                                      values.rawRadio.updated
+                                  values.rawRadio.updated
                                   ? 'alert-success'
                                   : 'alert-danger'
                                 : 'alert-info'}
@@ -264,16 +239,10 @@ class App extends Component {
                         <h4>
                             Raw Radio
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.rawRadio.initial}
-                                , updated:
-                                {' '}
-                                {values.rawRadio.updated}
+                                {' '}- initial: {values.rawRadio.initial}
+                                , updated: {values.rawRadio.updated}
                             </span>
                         </h4>
-
                         <input
                             id="rawRadio1"
                             type="radio"
@@ -284,10 +253,9 @@ class App extends Component {
                             onChange={this.handleChange}
                             value={values.rawRadio.initial}
                         />
-
-                        {'  '}{values.rawRadio.initial}
+                        {'  '}
+                        {values.rawRadio.initial}
                         <br />
-
                         <input
                             type="radio"
                             id="rawRadio"
@@ -298,8 +266,9 @@ class App extends Component {
                             onChange={this.handleChange}
                             value={values.rawRadio.updated}
                         />
-
-                        {'  '}{values.rawRadio.updated}<br />
+                        {'  '}
+                        {values.rawRadio.updated}
+                        <br />
                         {'  '}state: {this.state.rawRadio}
                     </div>
 
@@ -315,16 +284,10 @@ class App extends Component {
                         <h4>
                             Radio
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.radio.initial}
-                                , updated:
-                                {' '}
-                                {values.radio.updated}
+                                {' '}- initial: {values.radio.initial}
+                                , updated: {values.radio.updated}
                             </span>
                         </h4>
-
                         <Input
                             type="radio"
                             id="radio1"
@@ -334,10 +297,9 @@ class App extends Component {
                             onEarlyInput={this.handleEarlyInput}
                             value={values.radio.initial}
                         />
-
-                        {'  '}{values.radio.initial}
+                        {'  '}
+                        {values.radio.initial}
                         <br />
-
                         <Input
                             id="radio"
                             type="radio"
@@ -347,8 +309,9 @@ class App extends Component {
                             onEarlyInput={this.handleEarlyInput}
                             value={values.radio.updated}
                         />
-
-                        {'  '}{values.radio.updated}<br />
+                        {'  '}
+                        {values.radio.updated}
+                        <br />
                         {'  '}state: {this.state.radio}
                     </div>
                 </div>
@@ -358,7 +321,7 @@ class App extends Component {
                         className={`form-group col-sm-6 alert
                             ${this.state.auto
                                 ? this.state.rawSelect ===
-                                      values.rawSelect.updated
+                                  values.rawSelect.updated
                                   ? 'alert-success'
                                   : 'alert-danger'
                                 : 'alert-info'}
@@ -367,16 +330,10 @@ class App extends Component {
                         <h4>
                             Raw Select
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.rawSelect.initial}
-                                , updated:
-                                {' '}
-                                {values.rawSelect.updated}
+                                {' '}- initial: {values.rawSelect.initial}
+                                , updated: {values.rawSelect.updated}
                             </span>
                         </h4>
-
                         <select
                             id="rawSelect"
                             name="rawSelect"
@@ -405,16 +362,10 @@ class App extends Component {
                         <h4>
                             Select
                             <span style={{ fontSize: '14px' }}>
-                                {' '}
-                                - initial:
-                                {' '}
-                                {values.select.initial}
-                                , updated:
-                                {' '}
-                                {values.select.updated}
+                                {' '}- initial: {values.select.initial}
+                                , updated: {values.select.updated}
                             </span>
                         </h4>
-
                         <Select
                             id="select"
                             name="select"
