@@ -6,6 +6,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [3.0.1] - 2017-07-13
+### Changed
+- Add React v16 to peerDependencies
+- Package Updates
+
 ## [3.0.0] - 2017-05-31
 ### Added
 - Re-added Automatic "early input" handling when ``onEarlyInput`` does not exist.
