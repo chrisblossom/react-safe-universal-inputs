@@ -5,6 +5,9 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
+- Update tests and example to React 16
+- Package Updates
+- Use prettierrc.js
 
 ## [3.0.1] - 2017-07-13
 ### Changed

@@ -58,7 +58,7 @@ it('should show react input load bug', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -115,7 +115,7 @@ it('should not trigger onChange with no onEarlyInput when input is not changed',
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -185,7 +185,7 @@ it('should not trigger onEarlyInput when input is not changed', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -258,7 +258,7 @@ it('should trigger onEarlyInput when input changed before react client render', 
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -315,7 +315,7 @@ it('should trigger onChange with no onEarlyInput when input changed before react
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -388,7 +388,7 @@ it('should return dom node to onEarlyInput function', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -450,7 +450,7 @@ it('should return dom node to onChange function (no onEarlyInput)', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -508,7 +508,7 @@ it('should handle checkbox not changed without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -579,7 +579,7 @@ it('should handle checkbox not changed with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -640,7 +640,7 @@ it('should handle checkbox initial false without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -713,7 +713,7 @@ it('should handle checkbox initial false with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -787,7 +787,7 @@ it('should handle checkbox initial true with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -848,7 +848,7 @@ it('should handle checkbox initial true without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -920,7 +920,7 @@ it('should handle radio no change without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const option1El = ReactTestUtils.findRenderedDOMComponentWithClass(
         instance,
         'option1',
@@ -1013,7 +1013,7 @@ it('should handle radio no change with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const option1El = ReactTestUtils.findRenderedDOMComponentWithClass(
         instance,
         'option1',
@@ -1096,7 +1096,7 @@ it('should handle radio initial checked without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const option1El = ReactTestUtils.findRenderedDOMComponentWithClass(
         instance,
         'option1',
@@ -1192,7 +1192,7 @@ it('should handle radio initial checked with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const option1El = ReactTestUtils.findRenderedDOMComponentWithClass(
         instance,
         'option1',
@@ -1272,7 +1272,7 @@ it('should handle value to empty with onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -1329,7 +1329,7 @@ it('should handle value to empty without onEarlyInput', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,
         'input',
@@ -1364,7 +1364,7 @@ it('handles uncontrolled', () => {
 
     element.innerHTML = lastMarkup;
 
-    const instance = ReactDOM.render(<TestComponent />, element);
+    const instance = ReactDOM.hydrate(<TestComponent />, element);
 
     const el = ReactTestUtils.findRenderedDOMComponentWithTag(
         instance,

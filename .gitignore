@@ -7,3 +7,5 @@ dist
 *.ignore
 .idea
 .vscode
+package-lock.json
+yarn.lock

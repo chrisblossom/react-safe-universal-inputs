@@ -24,7 +24,7 @@ const bundles = [
 const build = Promise.all(
     bundles.map(async config => {
         const bundle = await rollup({
-            entry: 'src/index.js',
+            input: 'src/index.js',
             external: Object.keys(pkg.peerDependencies),
             plugins: [
                 babel({
@@ -56,8 +56,8 @@ const build = Promise.all(
 
         return await bundle.write({
             format: config.format,
-            dest: path.resolve(buildDir, `index${config.ext}`),
-            sourceMap: true,
+            file: path.resolve(buildDir, `index${config.ext}`),
+            sourcemap: true,
         });
     }),
 ).catch(error => {

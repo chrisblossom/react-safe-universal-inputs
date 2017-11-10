@@ -108,18 +108,21 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.rawInput ===
-                                  values.rawInput.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-info'}
+                            ${
+                                this.state.auto
+                                    ? this.state.rawInput ===
+                                      values.rawInput.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-info'
+                            }
                         `}
                     >
                         <h4>
                             Raw Input
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.rawInput.initial}
+                                {' '}
+                                - initial: {values.rawInput.initial}
                                 , updated: {values.rawInput.updated}
                             </span>
                         </h4>
@@ -135,17 +138,20 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.input === values.input.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-warning'}
+                            ${
+                                this.state.auto
+                                    ? this.state.input === values.input.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-warning'
+                            }
                         `}
                     >
                         <h4>
                             Input
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.input.initial}
+                                {' '}
+                                - initial: {values.input.initial}
                                 , updated: {values.input.updated}
                             </span>
                         </h4>
@@ -165,18 +171,21 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.rawCheckbox ===
-                                  values.rawCheckbox.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-info'}
+                            ${
+                                this.state.auto
+                                    ? this.state.rawCheckbox ===
+                                      values.rawCheckbox.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-info'
+                            }
                         `}
                     >
                         <h4>
                             Raw Checkbox
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial:{' '}
+                                {' '}
+                                - initial:{' '}
                                 {values.rawCheckbox.initial.toString()}
                                 , updated:{' '}
                                 {values.rawCheckbox.updated.toString()}
@@ -194,19 +203,21 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.checkbox ===
-                                  values.checkbox.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-warning'}
+                            ${
+                                this.state.auto
+                                    ? this.state.checkbox ===
+                                      values.checkbox.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-warning'
+                            }
                         `}
                     >
                         <h4>
                             Checkbox
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial:{' '}
-                                {values.checkbox.initial.toString()}
+                                {' '}
+                                - initial: {values.checkbox.initial.toString()}
                                 , updated: {values.checkbox.updated.toString()}
                             </span>
                         </h4>
@@ -228,18 +239,21 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.rawRadio ===
-                                  values.rawRadio.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-info'}
+                            ${
+                                this.state.auto
+                                    ? this.state.rawRadio ===
+                                      values.rawRadio.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-info'
+                            }
                         `}
                     >
                         <h4>
                             Raw Radio
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.rawRadio.initial}
+                                {' '}
+                                - initial: {values.rawRadio.initial}
                                 , updated: {values.rawRadio.updated}
                             </span>
                         </h4>
@@ -274,17 +288,20 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.radio === values.radio.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-warning'}
+                            ${
+                                this.state.auto
+                                    ? this.state.radio === values.radio.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-warning'
+                            }
                         `}
                     >
                         <h4>
                             Radio
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.radio.initial}
+                                {' '}
+                                - initial: {values.radio.initial}
                                 , updated: {values.radio.updated}
                             </span>
                         </h4>
@@ -319,18 +336,21 @@ class App extends Component {
                 <div className="row">
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.rawSelect ===
-                                  values.rawSelect.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-info'}
+                            ${
+                                this.state.auto
+                                    ? this.state.rawSelect ===
+                                      values.rawSelect.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-info'
+                            }
                         `}
                     >
                         <h4>
                             Raw Select
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.rawSelect.initial}
+                                {' '}
+                                - initial: {values.rawSelect.initial}
                                 , updated: {values.rawSelect.updated}
                             </span>
                         </h4>
@@ -352,17 +372,21 @@ class App extends Component {
 
                     <div
                         className={`form-group col-sm-6 alert
-                            ${this.state.auto
-                                ? this.state.select === values.select.updated
-                                  ? 'alert-success'
-                                  : 'alert-danger'
-                                : 'alert-warning'}
+                            ${
+                                this.state.auto
+                                    ? this.state.select ===
+                                      values.select.updated
+                                      ? 'alert-success'
+                                      : 'alert-danger'
+                                    : 'alert-warning'
+                            }
                         `}
                     >
                         <h4>
                             Select
                             <span style={{ fontSize: '14px' }}>
-                                {' '}- initial: {values.select.initial}
+                                {' '}
+                                - initial: {values.select.initial}
                                 , updated: {values.select.updated}
                             </span>
                         </h4>

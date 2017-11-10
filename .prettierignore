@@ -1,0 +1,9 @@
+.idea
+.vscode
+coverage
+node_modules
+build
+dist
+static
+flow-typed
+flow

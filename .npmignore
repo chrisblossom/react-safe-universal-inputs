@@ -1,3 +1,4 @@
 node_modules
-build/
 example/
+package-lock.json
+yarn.lock

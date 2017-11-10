@@ -1,6 +1,6 @@
 import 'babel-polyfill';
 import React from 'react';
-import { render } from 'react-dom';
+import { hydrate } from 'react-dom';
 
 import App, { values } from './App';
 
@@ -19,19 +19,20 @@ function initializeReact(button) {
     button.innerHTML = 'reload page';
     button.className = 'btn btn-danger';
 
-    render(<App />, htmlTargetDivId);
+    hydrate(<App />, htmlTargetDivId);
 
-    if (
-        !htmlTargetDivId ||
-        !htmlTargetDivId.firstChild ||
-        !htmlTargetDivId.firstChild.attributes ||
-        !htmlTargetDivId.firstChild.attributes['data-react-checksum']
-    ) {
-        console.error(
-            'Server-side React render was discarded. ' +
-                'Make sure that your initial render does not contain any client-side code.',
-        );
-    }
+    // React 16 no longer has data-react-checksum
+    // if (
+    //     !htmlTargetDivId ||
+    //     !htmlTargetDivId.firstChild ||
+    //     !htmlTargetDivId.firstChild.attributes ||
+    //     !htmlTargetDivId.firstChild.attributes['data-react-checksum']
+    // ) {
+    //     console.error(
+    //         'Server-side React render was discarded. ' +
+    //             'Make sure that your initial render does not contain any client-side code.',
+    //     );
+    // }
 }
 
 initAuto.onclick = event => {
